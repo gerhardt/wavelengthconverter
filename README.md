@@ -37,6 +37,7 @@ See the actual color of the wavelength displayed as a colored bar
 1. rm -rf .gradle build app/build
 2. ./gradlew clean
 3. ./gradlew assembleDebug
+4. adb install ./app/build/outputs/apk/debug/app-debug.apk
 
 ## License
 
