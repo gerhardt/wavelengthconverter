@@ -14,7 +14,7 @@ Enter values in any of these units:
 
 All other units are calculated along in real-time!
 
-<img width="449" height="922" alt="image" src="https://github.com/user-attachments/assets/7af3ee27-5fdc-4f2d-885a-8fd4ca2faef8" />
+<img width="200" height="922" alt="image" alight="right" src="https://github.com/user-attachments/assets/7af3ee27-5fdc-4f2d-885a-8fd4ca2faef8" />
 
 ### Visual Color Display
 See the actual color of the wavelength displayed as a colored bar
