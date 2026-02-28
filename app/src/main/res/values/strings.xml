@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">light &amp; matter</string>
+    <string name="wavelength_hint">Enter value</string>
+    <string name="related_wavelength">Related Wavelengths:</string>
+    <string name="please_enter_value">Please enter a wavelength value</string>
+    <string name="no_results">No matching wavelengths found</string>
+    <string name="group_name">light &amp; matter group</string>
+    <string name="converter_title">wavelength converter</string>
+    <string name="about">About</string>
+    <string name="about_text">Prof. Dr. Ilja Gerhardt\nlight &amp; matter group\nLeibniz University Hannover\nAppelstrasse 2\n30167 Hannover\nGermany\n\nilja.gerhardt@physics.uni-hannover.de\n\nAll wavelengths are VACUUM wavelengths (not air).\n\n© 2026 Ilja Gerhardt\nLicensed under GNU GPL v3</string>
+    <string name="website_url">https://www.fkp.uni-hannover.de/en/research-groups/translate-to-english-light-matter-ilja-gerhardt</string>
+</resources>

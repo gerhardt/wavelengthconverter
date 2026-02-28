@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    tools:context=".MainActivity">
+
+    <!-- 12-color spectrum bar FIXED at top (doesn't scroll) -->
+    <LinearLayout
+        android:id="@+id/spectrumBar"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/spectrum_1" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/spectrum_2" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/spectrum_3" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/spectrum_4" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/spectrum_5" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/spectrum_6" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/spectrum_7" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/spectrum_8" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/spectrum_9" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/spectrum_10" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/spectrum_11" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/spectrum_12" />
+    </LinearLayout>
+
+    <!-- FIXED content area (title and input fields - doesn't scroll) -->
+    <LinearLayout
+        android:id="@+id/fixedContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/spectrumBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Group name (scrolls) -->
+            <TextView
+                android:id="@+id/groupName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/group_name"
+                android:textColor="@color/light_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:layout_marginTop="12dp"/>
+
+            <!-- Converter title (scrolls) -->
+            <TextView
+                android:id="@+id/converterTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/converter_title"
+                android:textColor="@color/light_text_secondary"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginTop="4dp"/>
+
+            <!-- 5 input fields -->
+            <LinearLayout
+                android:id="@+id/inputsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <!-- nm field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    
+                    <EditText
+                        android:id="@+id/nmInput"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/light_text"
+                        android:textColorHint="@color/light_text_secondary"
+                        android:textCursorDrawable="@drawable/cursor_color"
+                        android:background="@drawable/input_background"
+                        android:padding="12dp"
+                        android:hint="Wavelength"
+                        android:textSize="16sp"/>
+                    
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="nm"
+                        android:textColor="@color/light_text"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:background="@drawable/unit_button_background"
+                        android:layout_marginStart="4dp"/>
+                </LinearLayout>
+
+                <!-- GHz field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    
+                    <EditText
+                        android:id="@+id/ghzInput"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/light_text"
+                        android:textColorHint="@color/light_text_secondary"
+                        android:textCursorDrawable="@drawable/cursor_color"
+                        android:background="@drawable/input_background"
+                        android:padding="12dp"
+                        android:hint="Frequency"
+                        android:textSize="16sp"/>
+                    
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="GHz"
+                        android:textColor="@color/light_text"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:background="@drawable/unit_button_background"
+                        android:layout_marginStart="4dp"/>
+                </LinearLayout>
+
+                <!-- cm⁻¹ field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    
+                    <EditText
+                        android:id="@+id/cm1Input"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/light_text"
+                        android:textColorHint="@color/light_text_secondary"
+                        android:textCursorDrawable="@drawable/cursor_color"
+                        android:background="@drawable/input_background"
+                        android:padding="12dp"
+                        android:hint="Wavenumber"
+                        android:textSize="16sp"/>
+                    
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="cm⁻¹"
+                        android:textColor="@color/light_text"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:background="@drawable/unit_button_background"
+                        android:layout_marginStart="4dp"/>
+                </LinearLayout>
+
+                <!-- eV field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    
+                    <EditText
+                        android:id="@+id/evInput"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/light_text"
+                        android:textColorHint="@color/light_text_secondary"
+                        android:textCursorDrawable="@drawable/cursor_color"
+                        android:background="@drawable/input_background"
+                        android:padding="12dp"
+                        android:hint="Energy"
+                        android:textSize="16sp"/>
+                    
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="eV"
+                        android:textColor="@color/light_text"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:background="@drawable/unit_button_background"
+                        android:layout_marginStart="4dp"/>
+                </LinearLayout>
+
+                <!-- kJ/mol field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    
+                    <EditText
+                        android:id="@+id/kjmolInput"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/light_text"
+                        android:textColorHint="@color/light_text_secondary"
+                        android:textCursorDrawable="@drawable/cursor_color"
+                        android:background="@drawable/input_background"
+                        android:padding="12dp"
+                        android:hint="Energy"
+                        android:textSize="16sp"/>
+                    
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="kJ/mol"
+                        android:textColor="@color/light_text"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:background="@drawable/unit_button_background"
+                        android:layout_marginStart="4dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Color bar (full width) -->
+            <View
+                android:id="@+id/colorDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- PREVIOUS wavelength (FIXED - top, one line) -->
+    <TextView
+        android:id="@+id/previousText"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp"
+        android:singleLine="true"
+        android:textColor="@color/light_text_secondary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fixedContent" />
+
+    <!-- CURRENT wavelengths (SCROLLABLE - middle) -->
+    <ScrollView
+        android:id="@+id/wavelengthScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="false"
+        app:layout_constraintTop_toBottomOf="@id/previousText"
+        app:layout_constraintBottom_toTopOf="@id/nextText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/currentText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/light_text_secondary"
+            android:lineSpacingMultiplier="1.0"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"/>
+
+    </ScrollView>
+
+    <!-- NEXT wavelength (FIXED - bottom, one line) -->
+    <TextView
+        android:id="@+id/nextText"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp"
+        android:singleLine="true"
+        android:textColor="@color/light_text_secondary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/buttonContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- FIXED bottom button container (doesn't scroll) -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- About button -->
+        <Button
+            android:id="@+id/aboutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#002060"
+            android:text="@string/about"
+            android:textColor="@color/light_text" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
