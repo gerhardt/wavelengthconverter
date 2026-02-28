@@ -33,6 +33,11 @@ See the actual color of the wavelength displayed as a colored bar
 4. Change the value by slidung right/left on the colorbar
 5. Scroll up/down to see related wavelengths from the database (changes also the value above)
 
+## Compiling
+1. rm -rf .gradle build app/build
+2. ./gradlew clean
+3. ./gradlew assembleDebug
+
 ## License
 
 Based on the wavelength calculator from Ilja Gerhardt / light & matter group
