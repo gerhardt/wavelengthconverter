@@ -1,0 +1,13 @@
+Convert between wavelength, frequency, wavenumber, and energy units.
+
+    Features:
+    * Real-time conversion between nm, GHz, cm⁻¹, eV, and kJ/mol
+    * Comprehensive spectroscopy database 
+    * Laser lines, atomic transitions, molecular spectra, calibration lamps
+    * Visual color display
+    * Completely offline - no internet required
+    * No tracking, no ads, no permissions
+
+Developed by the light & matter group at Leibniz University Hannover
+for research and education in quantum optics and spectroscopy.
+
